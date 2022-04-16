@@ -1,0 +1,15 @@
+.menu{
+    margin-top: 10px;
+}
+.menu a{
+    text-decoration: none;
+    margin-right: 40px;
+    color: black;
+    font-weight: 500;
+}
+.menu a:hover{
+   color: rgba(0, 0, 255, 0.597);
+}
+.menu a.active{
+    color: rgba(0, 0, 255, 0.597);
+}
