@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 
 const Header = () => {
   return (
-    <header>
+    <header className="menu-container">
       <nav className="menu">
         <NavLink to="/">Home</NavLink>
         <NavLink to="/checkout">Checkout</NavLink>

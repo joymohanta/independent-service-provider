@@ -1,0 +1,74 @@
+.form-container{
+    width: 600px;
+    border: 1px solid gray;
+    margin: 10px auto;
+    text-align: center;
+}
+.form-title{
+    text-align: center;
+    padding-bottom: 20px;
+}
+.input-field label{
+    display: block;
+    margin-right: 253px;
+    font-size: 18px;
+}
+.input-field input{
+    background-color: azure;
+    border-radius: 7px;
+    width: 300px;
+    height: 45px;
+    margin-bottom: 15px;
+    padding-left: 5px;
+    font-size: 16px;
+}
+#label-field{
+    margin-right: 215px;
+}
+.form-button{
+    border: none;
+    width: 300px;
+    height: 45px;
+    font-size: 20px;
+    font-weight: 500;
+    color: white;
+    background-color: #4B55AD;
+    border-radius: 7px;
+}
+.form-button:hover{
+    background-color: #323ead;
+}
+.reset-title{
+    margin-bottom: 10px;
+}
+.bar-panel{
+    margin: 10px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.first-bar{
+    border-bottom: 1px solid gray;
+    width: 150px;
+    margin-right: 20px;
+}
+.second-bar{
+    border-bottom: 1px solid gray;
+    width: 150px;
+    margin-left: 20px;
+}
+.google-button{
+    border: none;
+    border-radius: 7px;
+    background-color: rgba(38, 175, 175, 0.792);
+    width: 300px;
+    height: 45px;
+    margin: 15px 0px;
+
+}
+.google-button:hover{
+    background-color: aqua;
+}
+.google-button img{
+    width: 40px;
+}
