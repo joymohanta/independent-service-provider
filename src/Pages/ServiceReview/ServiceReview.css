@@ -1,0 +1,23 @@
+.per-card{
+    width: 300px;
+    height: 350px;
+    border-radius: 5px;
+
+}
+.per-card:hover{
+    box-shadow: 5px 5px 25px grey;
+}
+.card-button{
+    text-decoration: none;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    background-color: #4B55AD;
+    padding: 5px 20px;
+}
+.card-button span{
+    color: white;
+}
+.card-button:hover{
+    background-color: #2835ae;
+}

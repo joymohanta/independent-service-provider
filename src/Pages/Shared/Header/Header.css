@@ -1,10 +1,12 @@
 .menu-container{
     text-align: center;
+    position: sticky;
+
+
 }
 .menu{
     padding: 15px 0;
     background-color: #4B55AD;
-    position: sticky;
 }
 .menu a{
     text-decoration: none;

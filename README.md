@@ -4,17 +4,17 @@
 
 ## Project Details
 
-- You can consolt here about your health
+- You can consult here about your health
 - Benefits of Plastic Surgery
 - Remedy advice if SideEffect
 - Sunday to Thirsday (8am-7pm)
 - Suggestion about any health issue.
 
-Using properties are-
-React-Bootstrap
-React-Router
-Firebase-Authentication &
-React-Firebase-Hooks
+Used properties are-\
+React-Bootstrap\
+React-Router\
+Firebase-Authentication &\
+React-Firebase-Hooks\
 
 ### `npm start`
 

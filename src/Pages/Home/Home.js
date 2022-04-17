@@ -1,8 +1,11 @@
 import React from "react";
 import "./Home.css";
 import { Carousel } from "react-bootstrap";
+import useServices from "../../Hooks/useServices";
+import ServiceReview from "../ServiceReview/ServiceReview";
 
 const Home = () => {
+  const [services] = useServices();
   return (
     <div>
       <Carousel>
@@ -28,6 +31,12 @@ const Home = () => {
           />
         </Carousel.Item>
       </Carousel>
+      <h1 className="title">Service Reviews(3)</h1>
+      <div className="new-card">
+        {services.map((service) => (
+          <ServiceReview key={service.id} service={service}></ServiceReview>
+        ))}
+      </div>
     </div>
   );
 };
