@@ -1,15 +1,37 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useState } from "react";
+import { useSignInWithEmailAndPassword } from "react-firebase-hooks/auth";
+import { Link, useNavigate } from "react-router-dom";
+import auth from "../../firebase.init";
 import "./Login.css";
 
 const Login = () => {
+  const [email, setEmail] = useState("");
+  const [password, setPasword] = useState("");
+  const [signInWithEmailAndPassword, user, loading, error] =
+    useSignInWithEmailAndPassword(auth);
+  const navigate = useNavigate();
+
+  const handleEmailBlur = (event) => {
+    setEmail(event.target.value);
+  };
+  const handlePasswordBlur = (event) => {
+    setPasword(event.target.value);
+  };
+  if (user) {
+    navigate("/checkout");
+  }
+  const handleUserSignIn = (event) => {
+    event.preventDefault();
+    signInWithEmailAndPassword(email, password);
+  };
   return (
     <div className="form-container">
       <h2 className="form-title">Login</h2>
-      <form>
+      <form onSubmit={handleUserSignIn}>
         <div className="input-field">
           <label htmlFor="email">Email</label>
           <input
+            onBlur={handleEmailBlur}
             type="email"
             name="email"
             id=""
@@ -22,6 +44,7 @@ const Login = () => {
             Password
           </label>
           <input
+            onBlur={handlePasswordBlur}
             type="password"
             name="password"
             id=""
@@ -32,6 +55,7 @@ const Login = () => {
         <h6 className="reset-title">
           Forget Password? <Link to="/">Reset</Link>
         </h6>
+        <p className="text-danger">{error?.message}</p>
         <input className="form-button" type="submit" value="Login" />
         <div className="bar-panel">
           <div className="first-bar"></div>
@@ -48,7 +72,7 @@ const Login = () => {
             }
             alt=""
           />
-          Sign In with Google
+          <span>Sign In with Google</span>
         </button>
       </form>
     </div>
