@@ -21,6 +21,15 @@
 .menu a.active{
    color: black;
 }
+.main-title{
+    color: rgb(238, 255, 0);
+    margin-bottom: 270px;
+}
+.slider-title{
+    font-size: 40px;
+    font-weight: 500;
+}
+
 @media screen and (max-width: 576px) {
     .menu a{
        margin-right: 18px;

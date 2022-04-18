@@ -69,7 +69,7 @@ const Login = () => {
           />
         </div>
         <h6 className="reset-title">
-          Forget Password? <Link to="/">Reset</Link>
+          Forget Password? <Link to="/signup">Reset</Link>
         </h6>
         <p className="text-danger">{error?.message}</p>
         <input className="form-button" type="submit" value="Login" />
