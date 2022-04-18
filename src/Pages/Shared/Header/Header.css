@@ -21,3 +21,9 @@
 .menu a.active{
    color: black;
 }
+@media screen and (max-width: 576px) {
+    .menu a{
+       margin-right: 18px;
+    }
+    
+}
