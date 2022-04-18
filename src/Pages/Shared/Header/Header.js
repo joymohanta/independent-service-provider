@@ -15,7 +15,7 @@ const Header = () => {
     <header className="menu-container">
       <nav className="menu">
         <NavLink to="/">Home</NavLink>
-        <NavLink to="/checkout">Checkout</NavLink>
+        <NavLink to="/checkout">Service</NavLink>
         <NavLink to="/blogs">Blogs</NavLink>
         <NavLink to="/about">About</NavLink>
         <NavLink to="/login">Login</NavLink>

@@ -1,7 +1,10 @@
 import React, { useState } from "react";
 import "./SignUp.css";
 import { Link, useNavigate } from "react-router-dom";
-import { useCreateUserWithEmailAndPassword } from "react-firebase-hooks/auth";
+import {
+  useCreateUserWithEmailAndPassword,
+  useSignInWithGoogle,
+} from "react-firebase-hooks/auth";
 import auth from "../../firebase.init";
 
 const SignUp = () => {
@@ -14,6 +17,8 @@ const SignUp = () => {
   const [createUserWithEmailAndPassword, user] =
     useCreateUserWithEmailAndPassword(auth);
 
+  const [signInWithGoogle, user2, error2] = useSignInWithGoogle(auth);
+
   const handleEmailBlur = (event) => {
     setEmail(event.target.value);
   };
@@ -24,6 +29,17 @@ const SignUp = () => {
     setConfirmPassword(event.target.value);
   };
   if (user) {
+    navigate("/checkout");
+  }
+
+  if (error2) {
+    return /* (
+      <div>
+        <p className="text-danger">Error: {error2.message}</p>
+      </div>
+    ) */;
+  }
+  if (user2) {
     navigate("/checkout");
   }
   const handleCreateUser = (event) => {
@@ -90,7 +106,8 @@ const SignUp = () => {
         <h6>
           Already have an account? <Link to="/login">Login</Link>
         </h6>
-        <button className="google-button">
+        {<p className="text-danger">{error2.message}</p>}
+        <button className="google-button" onClick={() => signInWithGoogle()}>
           <img
             src={
               "https://i.ibb.co/yQtcZyY/google-logo-png-webinar-optimizing-for-success-google-business-webinar-13.png"

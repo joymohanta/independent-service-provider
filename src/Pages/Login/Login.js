@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useSignInWithEmailAndPassword } from "react-firebase-hooks/auth";
+import { useSignInWithGoogle } from "react-firebase-hooks/auth";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import auth from "../../firebase.init";
 import "./Login.css";
@@ -9,6 +10,7 @@ const Login = () => {
   const [password, setPasword] = useState("");
   const [signInWithEmailAndPassword, user, error] =
     useSignInWithEmailAndPassword(auth);
+  const [signInWithGoogle, user2, error2] = useSignInWithGoogle(auth);
   const navigate = useNavigate();
   const location = useLocation();
   const from = location.state?.from?.pathname || "/";
@@ -22,6 +24,18 @@ const Login = () => {
   if (user) {
     navigate(from, { replace: true });
   }
+
+  if (error2) {
+    return (
+      <div>
+        <p className="text-danger">Error: {error2.message}</p>
+      </div>
+    );
+  }
+  if (user2) {
+    navigate("/checkout");
+  }
+
   const handleUserSignIn = (event) => {
     event.preventDefault();
     signInWithEmailAndPassword(email, password);
@@ -67,7 +81,7 @@ const Login = () => {
         <h6>
           New to here <Link to="/signup">SignUp</Link>
         </h6>
-        <button className="google-button">
+        <button className="google-button" onClick={() => signInWithGoogle()}>
           <img
             src={
               "https://i.ibb.co/yQtcZyY/google-logo-png-webinar-optimizing-for-success-google-business-webinar-13.png"
