@@ -1,0 +1,35 @@
+.personal-info{
+    text-align: center;
+    
+}
+.personal-info img{
+    width: 200px;
+    border-radius: 100px;
+    border: 1px solid black;
+    margin-top: 30px;
+    
+}
+.goal-info{
+    margin-top: 130px;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-bottom: 50px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 80px;
+}
+.goal-info p{
+    text-align: justify;
+}
+.underline1{
+    border-bottom: 5px solid green;
+    width: 335px;
+    margin-left: 95px;
+    margin-bottom: 30px;
+}
+.underline2{
+    border-bottom: 5px solid green;
+    width: 382px;
+    margin-left: 70px;
+    margin-bottom: 30px;
+}

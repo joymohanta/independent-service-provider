@@ -10,11 +10,12 @@
 - Sunday to Thirsday (8am-7pm)
 - Suggestion about any health issue.
 
-Used properties are-\
+## Used properties are-
+
 React-Bootstrap\
 React-Router\
 Firebase-Authentication &\
-React-Firebase-Hooks\
+React-Firebase-Hooks
 
 ### `npm start`
 
